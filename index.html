@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Geonel - Portfolio Professionnel</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:200,300,400,500,600,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Tech Icons -->
+    <link href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" rel="stylesheet">
+    <!-- Site Main Style sheet css -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/responsive.css" rel="stylesheet">
+    <style>
+        /* Style pour la section "About" */
+     .about-content {
+    line-height: 1;
+}
+
+.about-intro {
+    margin-bottom: 30px;
+}
+
+.about-values {
+    margin-bottom: 30px;
+}
+
+.values-list {
+    padding-left: 10px;
+}
+
+.values-list li {
+    margin-bottom: 10px;
+    position: relative;
+    list-style-type: none;
+}
+
+.contact-info {
+    margin-bottom: 25px;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+}
+
+.fa {
+    margin-right: 10px;
+}
+        /* Style pour les logos technos */
+        .tech-stack {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.tech-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.tech-item:hover {
+    transform: translateY(-5px);
+}
+
+.section-title h2 {
+    position: relative;
+    display: inline-block;
+}
+
+.section-title h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background: #ea1538;
+}
+        
+        .tech-icon {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            color: #ea1538; /* Rouge exact de votre charte */
+        }
+        
+        .tech-name {
+            font-weight: 600;
+            color: #ffffff; /* Texte blanc comme dans votre CSS */
+        }
+
+        /* Style pour la section portfolios */
+        .portfolio-offer {
+            background-color: #000000; /* Noir exact */
+            color: #ffffff;
+            padding: 50px 20px;
+            margin: 50px 0;
+            text-align: center;
+            /* Bordure rouge exact */
+        }
+        
+        .portfolio-offer h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #ea1538; /* Rouge exact */
+            font-family: 'Poppins', sans-serif;
+            font-weight: 900;
+           
+        }
+        
+        .portfolio-offer p {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            color: #eaeaea; /* Gris clair comme dans votre CSS */
+        }
+        
+        .design-btn {
+            display: inline-block;
+            background: #ea1538; /* Rouge exact */
+            color: #ffffff;
+            padding: 10px 30px;
+            border-radius: 35px;
+            font-weight: 700;
+            font-size: 14px;
+            text-transform: capitalize;
+            letter-spacing: 0.7px;
+            border: 2px solid #ea1538;
+            transition: all 500ms ease;
+            cursor: pointer;
+            margin-top: 25px;
+        }
+        
+        .design-btn:hover {
+            color: #ffffff;
+            background: transparent;
+            border: 2px solid #ea1538;
+        }
+        /* Pour une meilleure responsivité */
+@media (max-width: 992px) {
+    .about-image {
+        max-height: 400px !important;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-image {
+        max-height: 350px !important;
+    }
+}
+.portfolio-offer {
+    padding: 70px 0;
+    color: white;
+    text-align: center;
+}
+
+.design-btn {
+    display: inline-block;
+    background: #ea1538;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 35px;
+    font-weight: 700;
+    margin-top: 20px;
+    border: 2px solid #ea1538;
+    transition: all 0.5s ease;
+}
+
+.design-btn:hover {
+    background: transparent;
+    color: white;
+}
+    </style>
+</head>
+
+<body>
+
+    <!-- Preloader Start -->
+    <div id="preloader-wapper">
+        <div class="loader-middle"></div>
+    </div>
+    <!-- Prealoader End -->
+
+    <!-- Page Wrapper Section Start -->
+    <div class="maslin-page-wrapper">
+
+        <!-- Navbar Start -->
+        <nav class="navbar navbar-b navbar-trans navbar-expand-md fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand js-scroll" href="index.html">Geo_Dev</a>
+                <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault" aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="navbar-collapse collapse justify-content-end" id="navbarDefault">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"> <a class="nav-link js-scroll active" href="#home">Accueil</a></li>
+                        <li class="nav-item"> <a class="nav-link js-scroll" href="#about">Biographie</a></li>
+                        <li class="nav-item"> <a class="nav-link js-scroll" href="#service">Services</a></li>
+                        <li class="nav-item"> <a class="nav-link js-scroll" href="#project">Projets</a></li>
+                        <li class="nav-item"> <a class="nav-link js-scroll" href="#review">Mon équipe</a></li>
+                        <li class="nav-item"> <a class="nav-link js-scroll" href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Navbar End -->
+
+        <!-- Home Section Start -->
+        <header id="home" class="home-area hero-equal-height overflow-hidden section-padding">
+            <div class="container">
+                <div class="row d-flex align-items-center">
+                    <div class="col-lg-10 offset-lg-1 col-md-8 offset-md-2">
+                        <div class="text-center home-content z-index position-relative">
+                            <h1>Geonel AMOUZOU</h1>
+                            <p>Je suis designer web et développeur fulldtack avec une passion pour l'apprentissage,</p>
+                            <p>J'aide les entreprises et les particuliers en développant des sites web. Je crée des sites web pour assurer votre succès à long terme. Je mets mon professionnalisme au service de tout client et de toute entreprise en <span class="element" data-text1="Designer web." data-text2="Développeur FullStack." data-text3="UI/UX designer." data-loop="true" data-backdelay="1500"></span></p>
+                            <a href="#contact" class="button js-scroll">Besoin Immédiat</a>
+                        </div>
+                    </div>
+                    <div class="social">
+                        <a class="text">Liens sociaux</a>
+                        <div class="line"></div>
+                        <a href="https://www.facebook.com/top.geo.2025"><i class="fa fa-facebook"></i></a>
+                        <a href="https://www.linkedin.com/in/geonel-dev/"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                        <a href="https://wa.me/+22897010368"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+                        <a href="https://github.com/Geodavinci"><i class="fa fa-github" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Home Section End -->
+
+        <!-- About Section Start -->
+        <section id="about" class="about-area section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="section-title">
+                            <h2>Biographie</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row align-items-center">
+                    <div class="col-lg-5 col-md-12">
+                        <div class="about-image" style="max-height: 500px; overflow: hidden;">
+                            <img src="assets/img/about.jpg" alt="Geonel AMOUZOU - Expert Développement Front-end" 
+                                 style="width: 100%;
+                                        height: 100%;
+                                        object-fit: cover;
+                                        border: 5px solid #0e0e0e;
+                                        padding: 5px;">
+                        </div>
+                    
+                        <!-- Légende sous l'image -->
+                        <p style="text-align: center;
+                                  margin-top: 15px;
+                                  color: #eaeaea;
+                                  font-size: 13px;
+                                  font-style: italic;
+                                  padding: 0 10px;">
+                            "Un expert UI/UX &amp; Développement Web/Mobile qui allie créativité et technique pour des solutions digitales performantes."
+                        </p>
+                    </div>
+                    <div class="col-lg-7 col-md-12">
+                        <!-- [Le reste de votre contenu texte reste inchangé] -->
+                        <div class="about-content">
+                            <h3>Bienvenue sur <span class="color-text">mon univers numérique</span></h3>
+                            
+                            <div class="about-intro">
+                                <p>Bonjour, je suis <strong class="color-text">Geonel AMOUZOU</strong>, <strong>développeur Web/Mobile</strong> et <strong>designer UI/UX</strong> passionné avec plus de 3 ans d'expérience.</p>
+                                
+                                <p>Spécialiste des interfaces utilisateur performantes, je maîtrise l'art de concilier <strong>esthétique</strong> et <strong>fonctionnalité</strong> pour créer des expériences digitales mémorables.</p>
+                            </div>
+                        
+                            <div class="about-values">
+                                <h3>Mon approche &amp; valeurs</h3>
+                                <ul class="values-list">
+                                    <li><span class="color-text">▶</span> <strong>Écoute active :</strong> Je prends le temps de comprendre vos objectifs business avant de coder</li>
+                                    <li><span class="color-text">▶</span> <strong>Solutions sur mesure :</strong> Chaque projet est unique et mérite une approche personnalisée</li>
+                                    <li><span class="color-text">▶</span> <strong>Qualité irréprochable :</strong> Code propre, design cohérent et expérience utilisateur optimale</li>
+                                    <li><span class="color-text">▶</span> <strong>Livraison dans les temps :</strong> Respect des délais sans compromis sur la qualité</li>
+                                </ul>
+                            </div>
+                        
+                            <div class="about-contact">
+                                <h3>Contactez-moi</h3>
+                                <div class="contact-info">
+                                    <p><i class="fa fa-phone color-text"></i> <strong>+228 93 54 76 66</strong></p>
+                                    <p><i class="fa fa-envelope color-text"></i> <strong>geonelamouzou@gmail.com</strong></p>
+                                    <p><i class="fa fa-user color-text"></i> <strong>Geo_Dev</strong> (pseudo professionnel)</p>
+                                </div>
+                                
+                                <a href="assets/cv/Cv_Geonel_Dev.pdf" download="Cv_Geonel_Dev.pdf" class="button">
+                                    <i class="fa fa-download"></i> Télécharger mon CV
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- About Section End -->
+        
+        <!-- Portfolio Offer Section -->
+        <section class="portfolio-offer" style="position: relative; z-index: 1; background-color: transparent;">
+            <div class="container" style="position: relative; z-index: 2;">
+                <h2>Boutique</h2>
+                <p style="position: relative; z-index: 2;">Je crée des designs en ligne haut de gamme qui mettent en valeur votre travail et votre expertise. Un portfolio professionnel peut booster votre carrière et attirer plus de clients.</p>
+                <a href="designs.html" class="design-btn js-scroll" style="position: relative; z-index: 2;">Voir designs</a>
+            </div>
+            <!-- Fond semi-transparent pour améliorer la lisibilité -->
+            <div style="position: absolute; 
+                        top: 0; 
+                        left: 0; 
+                        width: 100%; 
+                        height: 100%; 
+                        background: rgba(0, 0, 0, 0.6); 
+                        z-index: 1;">
+            </div>
+        </section>
+        
+        <!-- Skill Section Start -->
+        <section class="skill-area section-padding" style="position: relative; background-color: transparent; z-index: 1;">
+            <!-- Fond semi-transparent pour lisibilité -->
+            <div style="position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background: rgba(0, 0, 0, 0.7);
+                        z-index: -1;">
+            </div>
+            
+            <div class="container" style="position: relative; z-index: 2;">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="section-title">
+                            <h2 style="color: #ffffff;">Technologies Maîtrisées</h2>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tech-stack" style="position: relative; z-index: 2;">
+                    <div class="tech-item">
+                        <i class="devicon-html5-plain-wordmark tech-icon"></i>
+                        <span class="tech-name">HTML5</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="devicon-css3-plain-wordmark tech-icon"></i>
+                        <span class="tech-name">CSS3</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="devicon-javascript-plain tech-icon"></i>
+                        <span class="tech-name">JavaScript</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="devicon-flutter-plain tech-icon"></i>
+                        <span class="tech-name">Flutter</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="devicon-wordpress-plain tech-icon"></i>
+                        <span class="tech-name">WordPress</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="devicon-photoshop-plain tech-icon"></i>
+                        <span class="tech-name">Photoshop</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="devicon-mysql-plain-wordmark tech-icon"></i>
+                        <span class="tech-name">MySQL</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="devicon-figma-plain tech-icon"></i>
+                        <span class="tech-name">Figma</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="devicon-laravel-plain-wordmark tech-icon"></i>
+                        <span class="tech-name">Laravel</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="devicon-react-plain tech-icon"></i>
+                        <span class="tech-name">React</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="devicon-github-plain tech-icon"></i>
+                        <span class="tech-name">Github</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="devicon-mongodb-plain tech-icon"></i>
+                        <span class="tech-name">Mongo</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="devicon-nodejs-plain tech-icon"></i>
+                        <span class="tech-name">NodeJs</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="devicon-python-plain tech-icon"></i>
+                        <span class="tech-name">Python</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="devicon-vuejs-plain tech-icon"></i>
+                        <span class="tech-name">VueJs</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="devicon-docker-plain tech-icon"></i>
+                        <span class="tech-name">Docker</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Skill Section End -->
+
+        <!-- Service Section Start -->
+        <section id="service" class="service-area section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="section-title">
+                            <h2>Mes Services</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-content">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 services-item">
+                            <div class="single-services-box">
+                                <div class="single-services">
+                                    <div class="services-icon"> <i class="pe-7s-display1"></i> </div>
+                                    <div class="services-text">
+                                        <h3>Développement Web</h3>
+                                        <p>Je suis spécialisé dans le développement web, créant des sites et des applications performants et adaptatifs. Mon approche se concentre sur l'optimisation de la fonctionnalité, la vitesse et la sécurité, tout en garantissant une expérience utilisateur fluide.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 services-item">
+                            <div class="single-services-box">
+                                <div class="single-services">
+                                    <div class="services-icon"> <i class="pe-7s-graph1"></i> </div>
+                                    <div class="services-text">
+                                        <h3>Analyse de Marché</h3>
+                                        <p>Expert en analyse de marché, je comprends les tendances et les besoins des consommateurs pour orienter le développement de solutions web adaptées et pérennes.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 services-item">
+                            <div class="single-services-box">
+                                <div class="single-services">
+                                    <div class="services-icon"> <i class="pe-7s-tools"></i> </div>
+                                    <div class="services-text">
+                                        <h3>UI/UX Design</h3>
+                                        <p>Je conçois des interfaces utilisateur intuitives et esthétiques, axées sur une expérience fluide et agréable. Mon approche met l'accent sur les besoins des utilisateurs tout en garantissant la cohérence avec l'identité de la marque.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 services-item">
+                            <div class="single-services-box">
+                                <div class="single-services">
+                                    <div class="services-icon"> <i class="pe-7s-share"></i> </div>
+                                    <div class="services-text">
+                                        <h3>Communication Rapide</h3>
+                                        <p>Je privilégie une communication rapide et efficace, garantissant une réactivité optimale avec mes clients et collaborateurs. Cette approche permet de résoudre rapidement les problèmes et d'assurer un suivi constant pour le bon déroulement des projets.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 services-item">
+                            <div class="single-services-box">
+                                <div class="single-services">
+                                    <div class="services-icon"> <i class="pe-7s-edit"></i> </div>
+                                    <div class="services-text">
+                                        <h3>Optimisation SEO</h3>
+                                        <p>Je me spécialise dans l'optimisation SEO pour améliorer la visibilité des sites web sur les moteurs de recherche. En utilisant des techniques avancées, je permets à mes clients d'attirer un trafic organique ciblé et d'augmenter leur présence en ligne.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 services-item">
+                            <div class="single-services-box">
+                                <div class="single-services">
+                                    <div class="services-icon"> <i class="pe-7s-target"></i> </div>
+                                    <div class="services-text">
+                                        <h3>Portfolios Professionnels</h3>
+                                        <p>Je crée des portfolios en ligne sur mesure qui mettent en valeur votre travail et votre expertise. Un portfolio bien conçu peut faire toute la différence pour votre carrière ou votre entreprise.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Service Section End -->
+
+        <!-- Counter Section Start -->
+        <section class="counter-area section-padding">
+            <div class="container">
+                <div class="counter-inner-box">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6 col-sm-12 counter-item">
+                            <div class="single-counter-box">
+                                <div class="single-counter">
+                                    <h3 class="odometer" data-count="3">00</h3>
+                                    <p>Années d'expérience</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-12 counter-item">
+                            <div class="single-counter-box">
+                                <div class="single-counter">
+                                    <h3 class="odometer" data-count="100">00</h3>
+                                    <p>Projets réalisés</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-12 counter-item">
+                            <div class="single-counter-box">
+                                <div class="single-counter">
+                                    <h3 class="odometer" data-count="90">00</h3>
+                                    <p>Clients satisfaits</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-12 counter-item">
+                            <div class="single-counter-box">
+                                <div class="single-counter">
+                                    <h3 class="odometer" data-count="6">00</h3>
+                                    <p>Certifications</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Counter Section End -->
+
+        <!-- Project Section Start -->
+        <section id="project" class="project-area section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="section-title">
+                            <h2>Projets Récents</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="project-list">
+                            <ul class="nav" id="project-flters">
+                                <li class="filter filter-active" data-filter=".all">Tout</li>
+                                <li class="filter" data-filter=".branding">Branding</li>
+                                <li class="filter" data-filter=".application">Applications</li>
+                                <li class="filter" data-filter=".webdesign">Designs</li>
+                                <li class="filter" data-filter=".photography">Photographies</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="project-container">
+                        <!-- project-item -->
+                        <div class="col-lg-4 col-md-6 project-grid-item all branding webdesign">
+                            <a class="popup-img project-item" href="assets/img/projects/dclic.jpeg"> 
+                                <img src="assets/img/projects/dclic.jpeg" alt="img">
+                                <div class="project-img-overlay">
+                                    <div class="project-content">
+                                        <h4>Design Créatif</h4>
+                                        <h6>Voir le projet</h6>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- project-item -->
+                        <div class="col-lg-4 col-md-6 project-grid-item all application photography">
+                            <a class="popup-img project-item" href="assets/img/projects/work-2.png"> 
+                                <img src="assets/img/projects/work-2.png" alt="img">
+                                <div class="project-img-overlay">
+                                    <div class="project-content">
+                                        <h4>Design Créatif</h4>
+                                        <h6>Voir le projet</h6>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- project-item -->
+                        <div class="col-lg-4 col-md-6 project-grid-item all branding webdesign">
+                            <a class="popup-img project-item" href="assets/img/projects/geo_dev.webp"> 
+                                <img src="assets/img/projects/work-3.jpg" alt="img">
+                                <div class="project-img-overlay">
+                                    <div class="project-content">
+                                        <h4>Design Créatif</h4>
+                                        <h6>Voir le projet</h6>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- project-item -->
+                        <div class="col-lg-4 col-md-6 project-grid-item all branding webdesign photography">
+                            <a class="popup-img project-item" href="assets/img/projects/work-4.jpg"> 
+                                <img src="assets/img/projects/work-4.jpg" alt="img">
+                                <div class="project-img-overlay">
+                                    <div class="project-content">
+                                        <h4>Design Créatif</h4>
+                                        <h6>Voir le projet</h6>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- project-item -->
+                        <div class="col-lg-4 col-md-6 project-grid-item all application webdesign photography">
+                            <a class="popup-img project-item" href="assets/img/projects/work-5.jpg"> 
+                                <img src="assets/img/projects/work-5.jpg" alt="img">
+                                <div class="project-img-overlay">
+                                    <div class="project-content">
+                                        <h4>Design Créatif</h4>
+                                        <h6>Voir le projet</h6>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- project-item -->
+                        <div class="col-lg-4 col-md-6 project-grid-item all branding photography">
+                            <a class="popup-img project-item" href="assets/img/projects/virtuel_jeu.jpg"> 
+                                <img src="assets/img/projects/virtuel_jeu.jpg" alt="img">
+                                <div class="project-img-overlay">
+                                    <div class="project-content">
+                                        <h4>Design Créatif</h4>
+                                        <h6>Voir le projet</h6>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- project-item -->
+                        <div class="col-lg-4 col-md-6 project-grid-item all branding photography">
+                            <a class="popup-img project-item" href="assets/img/projects/pnud.png"> 
+                                <img src="assets/img/projects/pnud.png" alt="img">
+                                <div class="project-img-overlay">
+                                    <div class="project-content">
+                                        <h4>Design Créatif</h4>
+                                        <h6>Voir le projet</h6>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- project-item -->
+                        <div class="col-lg-4 col-md-6 project-grid-item all branding photography">
+                            <a class="popup-img project-item" href="assets/img/projects/projet.jpeg"> 
+                                <img src="assets/img/projects/projet.jpeg" alt="img">
+                                <div class="project-img-overlay">
+                                    <div class="project-content">
+                                        <h4>Design Créatif</h4>
+                                        <h6>Voir le projet</h6>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- project-item -->
+                        <div class="col-lg-4 col-md-6 project-grid-item all branding webdesign photography">
+                            <a class="popup-img project-item" href="assets/img/projects/work-7.png"> 
+                                <img src="assets/img/projects/work-7.png" alt="img">
+                                <div class="project-img-overlay">
+                                    <div class="project-content">
+                                        <h4>Design Créatif</h4>
+                                        <h6>Voir le projet</h6>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Project Section End -->
+
+        <!-- Testimonials Section Start -->
+        <section id="review" class="testimonial-area section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="section-title">
+                            <h2>MON ÉQUIPE</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 col-md-12">
+                        <div id="testimonial-slide" class="owl-carousel owl-theme owl-loaded owl-drag">
+                            <!-- testimonials item -->
+                            <div class="single-testimonial">
+                                <div class="testi-content-inner">
+                                    <div class="avatar">
+                                        <img src="assets/img/testimonial-12.jpg" alt="testimonial">
+                                    </div>
+                                    <div class="testimonial-content">
+                                        <h3>"Lui, c'est un Pro du marketing"</h3>
+                                        <p>Expert en analyse de marché, Il comprend les tendances et les besoins des consommateurs pour orienter les stratégies marketing</p>
+                                    </div>
+                                    <div class="testimonial-bio">
+                                        <div class="bio-info">
+                                            <h3 class="name">Armand Figi</h3><span>Marketeur</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- testimonials item -->
+                            <div class="single-testimonial">
+                                <div class="testi-content-inner">
+                                    <div class="avatar">
+                                        <img src="assets/img/testimonial.jpg" alt="testimonial">
+                                    </div>
+                                    <div class="testimonial-content">
+                                        <h3>"Lui, c'est un Pro en Back-end."</h3>
+                                        <p>Un expert en back-end est un développeur spécialisé dans la création et la gestion de la logique serveur d'une application web.</p>
+                                    </div>
+                                    <div class="testimonial-bio">
+                                        <div class="bio-info">
+                                            <h3 class="name">Godo Benoît</h3><span>Expert Backend</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- testimonials item -->
+                            <div class="single-testimonial">
+                                <div class="testi-content-inner">
+                                    <div class="avatar">
+                                        <img src="assets/img/testimonial-1.jpeg" alt="testimonial">
+                                    </div>
+                                    <div class="testimonial-content">
+                                        <h3>"Lui, c'est un spécialiste en création de base de données"</h3>
+                                        <p>Un professionnel spécialisé dans la conception, la mise en œuvre, la gestion et la maintenance des bases de données.</p>
+                                    </div>
+                                    <div class="testimonial-bio">
+                                        <div class="bio-info">
+                                            <h3 class="name">Grégoire Saba</h3><span>DB Creator</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- testimonials item -->
+                            <div class="single-testimonial">
+                                <div class="testi-content-inner">
+                                    <div class="avatar">
+                                        <img src="assets/img/testimonial-3.jpg" alt="testimonial">
+                                    </div>
+                                    <div class="testimonial-content">
+                                        <h3>"Lui, c'est un développeur front-end"</h3>
+                                        <p>Un développeur Front-end est un professionnel capable de travailler sur la couche apparente d'une application web, tant du côté client.</p>
+                                    </div>
+                                    <div class="testimonial-bio">
+                                        <div class="bio-info">
+                                            <h3 class="name">Taofik Mohamed</h3><span>Dev Frontend</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Testimonials Section End -->
+        
+        <!-- Contact Section Start -->
+        <section id="contact" class="contact-area section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 section-title">
+                        <h2>Contactez-Nous</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 col-md-5">
+                        <div class="row contact-information">
+                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                <div class="contact-details">
+                                    <i class="fa fa-phone"></i>
+                                    <h6>Appelez-moi</h6>
+                                    <p>+228 93547666</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                <div class="contact-details">
+                                    <i class="fa fa-home"></i>
+                                    <h6>Visitez-moi</h6>
+                                    <p>Rue des bourgeois Totsi.</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                <div class="contact-details">
+                                    <i class="fa fa-envelope"></i>
+                                    <h6>Un mail:</h6>
+                                    <p>geonelamouzou@gmail.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-7">
+                        <p class="form-message"></p>
+                        <br>
+                        <form class="contact-form form" id="contact-form" action="https://formspree.io/f/mldjdbaj" method="POST">
+                            <div class="controls">
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12">
+                                        <div class="form-group has-error has-danger">
+                                            <input id="form_name" type="text" name="name" placeholder="Votre nom" required="required"> 
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12">
+                                        <div class="form-group has-error has-danger">
+                                            <input id="form_email" type="email" name="email" placeholder="Votre email" required="required"> 
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12">
+                                        <div class="form-group has-error has-danger">
+                                            <input id="form_subject" type="text" name="subject" placeholder="Sujet" required="required"> 
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <textarea id="form_message" name="message" placeholder="Votre message" rows="4" required="required"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <button type="submit" class="button" data-text="Send Message"><span>Envoyer Message</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Contact Section End -->
+
+        <!-- Map Section Start -->
+        <div class="map-area">
+            <div class="map-contact">
+                <div id="map"></div>
+            </div>
+        </div>
+        <!-- Map Section End -->
+
+        <div class="lines">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+
+    </div>
+    <!-- Page Wrapper Section End -->
+    
+    <!-- Footer Section Start -->
+    <footer class="footer-area">
+        <div class="copyright-area text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>Copyright &copy; 2025 - Tous droits réservés</p>
+                        <p>Designed by <a href="https://github.com/Geodavinci">Géodavinci</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="back-to-top back-to-top-pulse"><i class="fa fa-caret-up"></i></a>
+
+    <!--Jquery js-->
+    <script src="assets/js/jquery-3.5.1.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/plugins.js"></script>
+    <script src="assets/js/typed.js"></script>
+    <script src="assets/js/map.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB4JwWo5VPt9WyNp3Ne2uc2FMGEePHpqJ8&callback=initMap" async="" defer=""></script>
+    <!--Site Main js-->
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
